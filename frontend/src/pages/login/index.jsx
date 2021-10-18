@@ -41,7 +41,7 @@ function LoginPage(){
                     error={errors.email.hasErros}
                     value={email}
                     margin="normal" 
-                    id="nome" 
+                    id="email" 
                     label="Email" 
                     required 
                     variant="outlined" 
@@ -55,7 +55,7 @@ function LoginPage(){
                     error={errors.senha.hasErros}
                     value={senha}
                     margin="normal" 
-                    id="nome" 
+                    id="senha" 
                     label="Senha" 
                     type="password"
                     required 

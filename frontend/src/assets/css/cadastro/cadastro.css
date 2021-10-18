@@ -1,0 +1,78 @@
+.cadastro__page{
+    width: 100%;
+}
+
+.conteudo__principal_container{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 444px;
+    padding: 0 3%;
+
+}
+
+.word__mark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo__principal_container h1{ 
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+}
+
+.word__mark img{
+    margin-left: 1rem;
+    width: 10%;
+
+}
+.form__nome_container{
+    width: 48%;
+}
+
+.form__sobrenome_container{
+    width: 48%;
+}
+
+.form__cadastro_container{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form__nomes_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cadastro__icon{
+    width: 10%;
+    margin-bottom: 0.7rem;
+}
+
+
+.form__login{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+}
+
+.form__cadastro_login{
+    text-decoration: underline;
+    color: #1976d2;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 12px;
+    text-align: end;
+}
+
+.form__cadastro_copyright{
+    margin-top: 3rem;
+    font-size: 12px;
+    text-decoration: none;
+    color: gray;
+}
