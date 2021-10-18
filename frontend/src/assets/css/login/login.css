@@ -1,0 +1,100 @@
+.container__page_login{
+    width: 100%;
+    display: flex;
+}
+
+.container__left_corner{
+    width: 63.5%;
+    height: 625px;
+}
+
+.image__left_corner{
+    width: 100%;
+    height: 100%;
+
+}
+.conteudo__principal_container{
+    margin: 4rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 0 3%;
+}
+
+.word__mark{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo__principal_container h1{ 
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+
+}
+
+.word__mark img{
+    margin-left: 1rem;
+    width: 10%;
+
+}
+
+
+.form__login_container{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.login__icon{
+    width: 8%;
+    margin-bottom: 0.7rem;
+}
+
+
+.form__login{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+}
+
+.form__login_cadastro{
+    text-decoration: underline;
+    color: #1976d2;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 12px;
+    text-align: end;
+}
+
+.form__login_copyright{
+    margin-top: 3rem;
+    font-size: 12px;
+    text-decoration: none;
+    color: gray;
+}
+
+
+@media  screen and (max-width: 900px){
+.container__left_corner{
+    width: 45%;
+}
+.conteudo__principal_container{
+    width: 55%;
+}
+    
+}
+
+@media  screen and (max-width: 600px){
+.container__left_corner{
+    width: 0%;
+    display: none;
+}
+.conteudo__principal_container{
+    width: 100%;
+}
+    
+}
