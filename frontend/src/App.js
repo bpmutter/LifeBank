@@ -1,16 +1,13 @@
 import * as React from 'react';
-import CadastroPage from './pages/cadastro/index.jsx';
-// import Header from './components/header';
-// import LoginPage from './pages/login/index.jsx';
+import GamePage from './components/game.jsx';
+//import Routes from './Routes.jsx';
 
 
 
 function App() {
   return (
    <>
-   {/* <Header></Header> */}
-   {/* <LoginPage></LoginPage> */}
-   <CadastroPage></CadastroPage>
+   {/* <GamePage/> */}
    </>
   );
 }

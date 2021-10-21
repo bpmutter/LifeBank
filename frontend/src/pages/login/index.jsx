@@ -4,13 +4,14 @@ import LoginIcon from '@mui/icons-material/Login';
 import * as React from 'react';
 import '../../assets/css/login/login.css'
 import LOGO from '../../assets/images/logo.png'
-import MONEY from '../../assets/images/moneyBig.jpg'
+import MONEY from './moneyBigC.jpg'
 import LOGIN from '../../assets/images/enter.png'
 
 function LoginPage(){
 
     const [senha, setSenha] = React.useState("");
     const [email, setEmail] = React.useState("");
+    // eslint-disable-next-line
     const [errors, setErrors] = React.useState({email:{hasErros:false, errorText: ""}, senha:{hasErros:false, errorText: ""}})
     
     function onClickButton(){
@@ -67,8 +68,8 @@ function LoginPage(){
                 </div>
 
                     <Button  type="submit"  variant="contained" fullWidth>Entrar <LoginIcon></LoginIcon></Button>
-                    <a className="form__login_cadastro" href="/">Não possui conta? Cadastre-se</a>
-                    <a className="form__login_copyright" href="/">Copyright © Life Bank 2021</a>
+                    <a className="form__login_cadastro" href="/cadastro">Não possui conta? Cadastre-se</a>
+                    <a className="form__login_copyright" href="https://github.com/root-who">Copyright © Life Bank 2021</a>
                 </form>
             </div>
 

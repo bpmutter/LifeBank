@@ -7,8 +7,11 @@ import Button from '@mui/material/Button';
 import LoginIcon from '@mui/icons-material/Login';
 
 function CadastroPage(){
+ 
+
      const [senha, setSenha] = React.useState("");
     const [email, setEmail] = React.useState("");
+    // eslint-disable-next-line
     const [errors, setErrors] = React.useState({email:{hasErros:false, errorText: ""}, senha:{hasErros:false, errorText: ""}})
     
     function onClickButton(){
@@ -100,7 +103,7 @@ function CadastroPage(){
 
                     <Button  type="submit"  variant="contained" fullWidth>Cadastrar-se <LoginIcon></LoginIcon></Button>
                     <a className="form__cadastro_login" href="/">Já possui conta? Login</a>
-                    <a className="form__cadastro_copyright" href="/">Copyright © Life Bank 2021</a>
+                    <a className="form__cadastro_copyright" href="https://github.com/root-who">Copyright © Life Bank 2021</a>
                 </form>
             </div>
         </main>

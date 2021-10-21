@@ -2,7 +2,7 @@
     width: 100%;
 }
 
-.conteudo__principal_container{
+.cadastro__page .conteudo__principal_container{
     margin: 0 auto;
     display: flex;
     flex-direction: column;

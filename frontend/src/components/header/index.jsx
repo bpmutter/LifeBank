@@ -1,5 +1,5 @@
 import * as React from 'react';
-import '../../assets/css/header/header.css'
+import 'assets/css/header/header.css'
 import LOGO from '../../assets/images/logo.png'
 // import ReactDOM from 'react-dom';
 
