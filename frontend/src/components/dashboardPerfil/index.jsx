@@ -29,16 +29,18 @@ function DashBoardPerfil({user, isAuth}){
     
 
 
-    function atualiza(){
+    
+
+    React.useEffect(()=>{
+       setInterval(atualiza(), 1000);
+
+       function atualiza(){
         var date = new Date();
         var hr = date.getHours();
         var min =  date.getMinutes();
         var sec = date.getSeconds();
         setTime(hr + ":" + min + ":" + sec);
     }
-
-    React.useEffect(()=>{
-       setInterval(atualiza, 1000);
        // eslint-disable-next-line   
     }, [])
 

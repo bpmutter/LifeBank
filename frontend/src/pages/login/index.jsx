@@ -103,6 +103,7 @@ function LoginPage({login}){
                     id="senha" 
                     label="Senha" 
                     type="password"
+                    autoComplete="on"
                     required 
                     variant="outlined" 
                     fullWidth   
