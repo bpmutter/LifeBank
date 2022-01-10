@@ -1,5 +1,6 @@
 .cadastro__page{
     width: 100%;
+    margin-bottom: 3rem;
 }
 
 .cadastro__page .conteudo__principal_container{
@@ -9,13 +10,16 @@
     align-items: center;
     max-width: 444px;
     padding: 0 3%;
-
 }
 
 .word__mark{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.word__mark h1{
+    margin: 1rem 0 0.5rem 0;
 }
 
 .conteudo__principal_container h1{ 
@@ -38,7 +42,7 @@
 
 .form__cadastro_container{
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .form__nomes_container{

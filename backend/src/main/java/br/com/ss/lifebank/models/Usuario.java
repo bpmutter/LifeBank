@@ -1,8 +1,11 @@
 package br.com.ss.lifebank.models;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,9 +31,23 @@ public class Usuario implements UserDetails {
 	private String nome;
 	@JsonIgnore
 	private String senha;
+	@Column(nullable = false, unique = true)
 	private String email;
-	@OneToMany
-	private List<Perfil> perfis;
+	@OneToMany(cascade = CascadeType.ALL)
+	private List<Perfil> perfis = new ArrayList<>();
+
+	
+	
+	public Usuario() {
+	}
+
+
+	public Usuario(String nome, String senha, String email) {
+		this.nome = nome;
+		this.senha = senha;
+		this.email = email;
+	}
+
 
 	public void addPerfil(String perfil) {
 		perfis.add(new Perfil(perfil));
