@@ -9,6 +9,11 @@ import Button from '@mui/material/Button';
 import PlayCircleFilledWhiteIcon from '@mui/icons-material/PlayCircleFilledWhite';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import FooterLifeBank from "../../components/footer";
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
 // import axios from 'axios';
 // import API_URL from '../../util/api'
 
@@ -26,6 +31,7 @@ const unityContext = new UnityContext({
 
 function GamePage({logout, isAutenticated, user}){
 
+    const [alert, setAlert] = useState(false);
     const [player, setPlayer] = useState({})
     const [progression, setProgression] = useState(0);
     const [isLoaded, setIsLoaded] = useState(false);
@@ -46,6 +52,10 @@ function GamePage({logout, isAutenticated, user}){
     const menuBurguerStyle = {
         display:"flex",
         visibility:"visible"
+    }
+
+    function alertClose(){
+        setAlert(false);
     }
     
     //var player = new PlayerEntity();
@@ -79,12 +89,15 @@ function GamePage({logout, isAutenticated, user}){
                 });
 
                 unityContext.on("AtualizaSaldo", function(playerAtualizado){
+                    console.log(playerAtualizado);
                     setPlayer({...JSON.parse(playerAtualizado)})
                     setIsInserted(true);
                 });
 
                 unityContext.on("CheckPoint", function(turn){
-                    console.log()
+                    console.log(turn)
+                    setPlayer({...JSON.parse(turn)})
+                    setAlert(true);
                 }) 
 
         // eslint-disable-next-line
@@ -122,7 +135,7 @@ function GamePage({logout, isAutenticated, user}){
                         <MonetizationOnIcon sx={{ width: '80%', flexGrow: 1 }}/>
                         </div>
                         
-                        <p className="game_card_text">R$ {!isInserted ?  parseFloat(2000.00).toPrecision(3) : parseFloat(player.saldo).toPrecision(3)}</p>
+                        <p className="game_card_text">R$ {!isInserted ?  parseFloat(2000.00).toFixed(2) : parseFloat(player.saldo).toFixed(2)}</p>
                     </a>
                 </div>   
                 <div className="game__framework" 
@@ -141,6 +154,21 @@ function GamePage({logout, isAutenticated, user}){
                                     visibility: isLoaded ? "visible" : "hidden"}} />
                 </div> 
             </div>
+            <Dialog open={alert} onClose={alertClose}>
+            <DialogTitle id="alert-dialog-title">
+                {"Check Point"}
+            </DialogTitle>
+                <DialogContent>
+                <DialogContentText id="alert-dialog-description">
+                    Você acaba de receber seu salario de {parseFloat(player.salario).toFixed(2)}.
+                </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                <Button onClick={alertClose} autoFocus>
+                    Ok
+                </Button>
+                </DialogActions>
+            </Dialog>
             <FooterLifeBank/>
           </div>
         </>

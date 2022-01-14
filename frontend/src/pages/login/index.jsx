@@ -42,7 +42,12 @@ function LoginPage({login}){
                 }, 4000);
             }).catch(function(error){
                 setSpinner(false);
-                
+                if(error.response === undefined) {
+                    setErrors({
+                            email:{hasErros:true, errorText: "Erro no servidor volte mais tarde por favor!"},
+                           senha:{hasErros:true, errorText: "Erro no servidor volte mais tarde por favor!"}})
+                    return;
+                }
                 if(error.response.status === 404){
                     setErrors({email:{hasErros:true, errorText: "Email ou senha inválida"},
                             senha:{hasErros:true, errorText: "Email ou senha inválida"}})

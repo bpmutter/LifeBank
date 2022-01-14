@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 import MONEY from'./pages/login/moneyBig.jpg'
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+// eslint-disable-next-line no-unused-vars
+import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 import CadastroPage from './pages/cadastro';
 // eslint-disable-next-line
 import LoginPage from './pages/login';
@@ -67,6 +68,9 @@ const Routes = ()=> {
                     <Route  path="/regras">
                         <PageRegras isAutenticated={isAutenticated()} user={user} logout={logout}/>
                     </Route>
+                    {/* Abaixo redirecionamento para pargina 404 */}
+                    {/* <Route path="/not-found" component={PageRegras} />
+                    <Redirect to="/404" /> */}
 
                                             
                 </Switch>

@@ -5,30 +5,8 @@ import CalculateIcon from '@mui/icons-material/Calculate';
 import * as React from 'react'
 import '../../assets/css/dashboard/dashboard.css'
 
-// import axios from 'axios';
-// import Jogador from '../../util/jogador'
-// import API_URL from '../../util/api'
-
-// function onClose(){
-//     var jogador = new Jogador();
-//     jogador.email = "joaopaulo_gonzaga@outlook.com"
-//     console.log(jogador.request())
-//     axios({
-//         method: 'POST',
-//         url: API_URL + "/jogador/by-email",
-//         data: jogador.request()
-//         }).then((response) => {
-//             console.log(response.data);
-//         }).catch((response)=>{
-//             console.log(response.data);
-//         })
-//     }
-
 function DashBoardPerfil({user, isAuth}){
     const[time, setTime] =  React.useState("")
-    
-
-
     
 
     React.useEffect(()=>{
@@ -40,8 +18,7 @@ function DashBoardPerfil({user, isAuth}){
         var min =  date.getMinutes();
         var sec = date.getSeconds();
         setTime(hr + ":" + min + ":" + sec);
-    }
-       // eslint-disable-next-line   
+        }
     }, [])
 
     return(
